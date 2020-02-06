@@ -29,3 +29,11 @@ bin/logstash -f /path_to_config_file/config.conf
 
 Elasticsearch supports two spatial data types : geo_point and geo_shape.
 For indexing data containing lat, long info in a csv file, mutate filter plugin is used  for converting and merging the lat, long information and adding a new location field with geo_point data type in the output index. (Refer to csv_configuration.conf file for the code)  
+
+## Configuration for directly indexing PostgreSQL data 
+ 
+ 1- Download the PostgreSQL JDBC Driver from PostgreSQL
+ 2- Make sure to install jbdc plugin to allow logstash to communicate with the PostgreSQL database
+ 3- Alter the jbdc string and driver path in the postgres_to_elastic.conf configuration
+ 3- Alter HOST IP and table/index name according to requirements in postgres_to_elastic.conf configuration.
+ 4- Run the command in Logstash deployment section with the modified configuration file as an input
