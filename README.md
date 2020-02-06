@@ -20,8 +20,8 @@ sudo apt-get update && sudo apt-get install logstash
 ```
 ## Logstash Deployment (Ubuntu 18.04)
 
- Once installed, it is configured by default (unless specified) in the directory /usr/share/logstash
-To run the service change the current path to the this directory and run following command : 
+ Once installed, it is configured by default (unless specified) in the directory /usr/share/logstash.
+To run the service change the current path to this directory and run following command : 
 ```
 bin/logstash -f /path_to_config_file/config.conf
 ```
@@ -29,7 +29,9 @@ bin/logstash -f /path_to_config_file/config.conf
 
 It is often convinient to already map indexes to the appropiate data type (specially while indexing spatial data) so that while ingesting data using logstash, it doesn't dynamically map the location field and assume it to be of type - text. 
 
-The file create_index_mapping.py creates indexes and maps the fields data type as specified. Number of columns and data types can  be changed according to the requirements   
+The file create_index_mapping.py creates indexes and maps the field data type as specified.
+
+Number of columns and data types can  be changed according to the requirements   
 
 
 ## Configuration for transferring csv files containing spatial information 
