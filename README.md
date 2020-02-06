@@ -25,6 +25,13 @@ To run the service change the current path to the this directory and run followi
 
 bin/logstash -f /path_to_config_file/config.conf
 
+## Mapping Elastic indexes to appropiate data types 
+
+It is often convinient to already map indexes to the appropiate data type (specially while indexing spatial data) so that while ingesting data using logstash, it doesn't dynamically map the location field and assume it to be of type - text. 
+
+The file create_index_mapping.py creates indexes and maps the fields data type as specified. Number of columns and data types can  be changed according to the requirements   
+
+
 ## Configuration for transferring csv files containing spatial information 
 
 Elasticsearch supports two spatial data types : geo_point and geo_shape.
