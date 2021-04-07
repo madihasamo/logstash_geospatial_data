@@ -1,4 +1,4 @@
-# Ingesting geospatial data using Logstash
+# Ingesting Geospatial Data using Logstash
 Logstash configuration for ingesting geospatial data to Elasticsearch 
 
 ## Logstash Installation (Ubuntu 18.04)
